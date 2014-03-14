@@ -9,7 +9,7 @@ autoload -U colors && colors
 # Load and execute the prompt theming system.
 fpath=("$pm/dotfiles/terminal" $fpath)
 autoload -Uz promptinit && promptinit
-prompt 'paulmillr'
+prompt 'nrmitchi'
 
 # ==================================================================
 # = Aliases =

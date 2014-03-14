@@ -11,7 +11,7 @@
 #     # <switch to master branch>
 #     git cleanup
 #
-# (c) 2012 Paul Miller (paulmillr.com), Mathias Schäfer, moviepilot.com.
+# (c) 2012 Paul Miller (nrmitchi.com), Mathias Schäfer, moviepilot.com.
 # The script can be redistributed under the MIT License.
 
 # CONFIG

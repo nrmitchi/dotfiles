@@ -7,7 +7,7 @@ pushd .
 mkdir -p $dev
 cd $dev
 
-echo 'Enter new hostname of the machine (e.g. macbook-paulmillr)'
+echo 'Enter new hostname of the machine (e.g. macbook-nrmitchi)'
   read hostname
   echo "Setting new hostname to $hostname..."
   scutil --set HostName "$hostname"

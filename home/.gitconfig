@@ -1,9 +1,9 @@
 [user]
-	name = Paul Miller
-	email = paul@paulmillr.com
+	name = Nick Mitchinson
+	email = nrmitchi@gmail.com
 
 [github]
-  user = paulmillr
+  user = nrmitchi
 
 [alias]
   br = branch
@@ -24,17 +24,18 @@
   discard = checkout -- .
   rmtag = "!sh -c 'git tag -d $1; git push origin :refs/tags/$1'"
 
-  changelog = !sh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-changelog.sh"
-  rstatus   = !zsh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-rstatus.sh"
-  release   = !sh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-release.sh"
-  setup     = !zsh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-setup.sh"
-  summary   = !zsh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-summary.sh"
-  delete-branch = !sh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-delete-branch.sh"
+  changelog = !sh "$HOME/Developer/nrmitchi/dotfiles/git-extras/git-changelog.sh"
+  rstatus   = !zsh "$HOME/Developer/nrmitchi/dotfiles/git-extras/git-rstatus.sh"
+  release   = !sh "$HOME/Developer/nrmitchi/dotfiles/git-extras/git-release.sh"
+  setup     = !zsh "$HOME/Developer/nrmitchi/dotfiles/git-extras/git-setup.sh"
+  summary   = !zsh "$HOME/Developer/nrmitchi/dotfiles/git-extras/git-summary.sh"
+  delete-branch = !sh "$HOME/Developer/nrmitchi/dotfiles/git-extras/git-delete-branch.sh"
 
   pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1; } ; f"
 
-  ghfork = !sh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-ghpull.sh"
-  cleanup = !ruby "$HOME/Developer/paulmillr/dotfiles/git-extras/git-cleanup.rb"
+  ghfork = !sh "$HOME/Developer/nrmitchi/dotfiles/git-extras/git-ghpull.sh"
+  cleanup = !ruby "$HOME/Developer/nrmitchi/dotfiles/git-extras/git-cleanup.rb"
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 [push]
   default = current
@@ -57,7 +58,7 @@
   abbrevCommit = true
 
 # URL shorthands
-# gh:paulmillr/dotfiles
+# gh:nrmitchi/dotfiles
 [url "git@github.com:"]
   insteadOf = "gh:"
   pushInsteadOf = "gh:"

@@ -7,11 +7,11 @@
 # * is prepended to git branch name if repo is dirty.
 # ❯ is green or red depending on previous command exit status.
 #
-# Author: Paul Miller (paulmillr.com)
+# Author: Paul Miller (nrmitchi.com)
 
 vcs_info=''
 
-function prompt_paulmillr_precmd {
+function prompt_nrmitchi_precmd {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
 }
@@ -33,7 +33,7 @@ function get-vcs-info {
   fi
 }
 
-function prompt_paulmillr_setup {
+function prompt_nrmitchi_setup {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
   prompt_opts=(cr percent subst)
@@ -51,5 +51,5 @@ function prompt_paulmillr_setup {
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
 
-prompt_paulmillr_setup "$@"
+prompt_nrmitchi_setup "$@"
 
