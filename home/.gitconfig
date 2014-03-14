@@ -16,6 +16,7 @@
   cpush = "!sh -c 'git commit -au -m \"$1\" && git push -u origin' -"
   d = diff
   st = status --short
+  s = status
 
   graph = log --graph
   last = log -n 10
@@ -49,11 +50,13 @@
   pager = true
 
 [color "status"]
-  added = green bold
-  changed = blue bold
-  untracked = magenta bold
+  added = blue bold
+  changed = green bold
+  untracked = red
 
 [color "branch"]
+  current = red bold
+  local = green
   remote = yellow
 
 [core]
