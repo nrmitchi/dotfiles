@@ -4,7 +4,7 @@ Colourful & robust OS X configuration files and utilities.
 Installation is done with simple command set (see “building system from scratch” for setup of new system):
 
 ```
-curl --silent https://raw.github.com/paulmillr/dotfiles/master/install.sh | sh
+curl --silent https://raw.github.com/nrmitchi/dotfiles/master/install.sh | sh
 ```
 
 ## Features
@@ -49,7 +49,7 @@ Shell (zsh):
 
 * Install Source Code Pro font.
 * Install XCode & its Command Line Tools.
-* Change Terminal.app theme to `terminal/paulmillr.terminal`.
+* Change Terminal.app theme to `terminal/nrmitchi.terminal`.
 * Change default shell to ZSH: `chsh -s /bin/zsh`.
 * Insert proper hosts from `etc/hosts` to system’s `/etc/hosts`.
 * Create `~/Development/`
