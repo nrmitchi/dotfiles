@@ -116,3 +116,6 @@ BROWSER=''
 unset BROWSER
 
 export NODE_PATH='/usr/local/lib/node_modules'
+
+source ~/.rvm/scripts/rvm
+source ~/.environment_variables 
