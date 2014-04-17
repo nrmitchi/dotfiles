@@ -305,6 +305,8 @@ case $TERM in
         ;;
 esac
 
+alias fixsound='sudo kextunload /System/Library/Extensions/AppleHDA.kext && sudo kextload /System/Library/Extensions/AppleHDA.kext'
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 
