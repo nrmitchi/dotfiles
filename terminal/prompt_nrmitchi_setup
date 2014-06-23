@@ -18,9 +18,9 @@ function prompt_nrmitchi_precmd {
 
 function list-files {
   if is-callable 'dircolors'; then
-    echo `script -q /dev/null ls --group-directories-first --color=auto . | tr -d '\r' | cat`
+    ls --group-directories-first --color=auto .
   else
-    echo `script -q /dev/null ls -G . | tr -d '\r' | cat`
+    ls -G
   fi
 }
 
