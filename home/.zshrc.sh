@@ -293,3 +293,20 @@ function maxcpu() {
   yes > $dn & yes > $dn & yes > $dn & yes > $dn &
   yes > $dn & yes > $dn & yes > $dn & yes > $dn &
 }
+
+# Set tab title to current directory
+# Using "\e]1;%n@%m: %~\a" will include user@host
+case $TERM in
+    *xterm*|ansi)
+        function settab { print -Pn "\e]1;%~\a" }
+        function settitle { print -Pn "\e]2;%~\a" }
+        function chpwd { settab;settitle }
+        settab;settitle
+        ;;
+esac
+
+alias fixsound='sudo kextunload /System/Library/Extensions/AppleHDA.kext && sudo kextload /System/Library/Extensions/AppleHDA.kext'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+
