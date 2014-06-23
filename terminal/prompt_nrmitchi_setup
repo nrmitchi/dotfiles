@@ -17,7 +17,11 @@ function prompt_nrmitchi_precmd {
 }
 
 function list-files {
-  echo `script -q /dev/null ls -G . | tr -d '\r' | cat`
+  if is-callable 'dircolors'; then
+    echo `script -q /dev/null ls --group-directories-first --color=auto . | tr -d '\r' | cat`
+  else
+    echo `script -q /dev/null ls -G . | tr -d '\r' | cat`
+  fi
 }
 
 function get-vcs-info {
