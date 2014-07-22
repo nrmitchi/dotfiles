@@ -6,4 +6,4 @@ mkdir -p $dir
 cd $dir
 git clone git://github.com/nrmitchi/dotfiles.git
 cd dotfiles
-sudo bash symlink-dotfiles.sh
+bash symlink-dotfiles.sh
