@@ -99,12 +99,12 @@ alias gl='git log --no-merges'
 # Dev short-cuts.
 
 # Brunch.
-alias bb='brunch build'
-alias bbp='brunch build --production'
-alias dbb="DEBUG='brunch:*' brunch build"
-alias dbw="DEBUG='brunch:*' brunch watch"
-alias bw='brunch watch'
-alias bws='brunch watch --server'
+# alias bb='brunch build'
+# alias bbp='brunch build --production'
+# alias dbb="DEBUG='brunch:*' brunch build"
+# alias dbw="DEBUG='brunch:*' brunch watch"
+# alias bw='brunch watch'
+# alias bws='brunch watch --server'
 
 # Package managers.
 alias bi='bower install'
