@@ -31,7 +31,7 @@ if [[ `uname` == 'Darwin' ]]; then
     echo 'Installing Homebrew...'
       ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
       brew update
-      brew install htop mysql nginx node ruby
+      brew install htop wget mysql nginx node ruby
   fi
 
   echo 'Tweaking OS X...'
@@ -61,6 +61,29 @@ echo 'Applying sublime config...'
     echo "Install Sublime Text http://www.sublimetext.com"
   fi
 
+install_tools() {
+  echo "Installing:"
+  install_languages
+  install_databases
+  install_devtools
+  install_applications
+}
+install_languages() {
+  echo "\tNode and NPM..."
+    brew install node npm
+  
+}
+install_databases() {
+  echo "\tPostgreSQL"
+    brew install postgresql
+  echo "\tMySQL"
+    brew install mysql
+}
+install_devtools() {
+  ## Vagrant
+  echo "\tVagrant"
+  ## Docker (boot2docker)
+}
 open_apps() {
   echo 'Install apps:'
   echo 'Firefox:'
