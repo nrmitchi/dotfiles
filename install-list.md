@@ -11,6 +11,10 @@
 ## NPM
 ## Go / GOPATH
 
+## Scala
+## Play Activator
+
+## Scalatra (and g8) (http://scalatra.org/getting-started/installation.html)
 # Dev Tools
 
 ## wget
