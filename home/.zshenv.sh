@@ -119,12 +119,12 @@ export NODE_PATH='/usr/local/lib/node_modules'
 
 if [ -f ~/.rvm/scripts/rvm ]; then
   source ~/.rvm/scripts/rvm
-else echo "   ~/.rvm/scripts/rvm not found"
+#else echo "   ~/.rvm/scripts/rvm not found"
 fi
 
 if [ -f ~/.environment_variables  ]; then
   source ~/.environment_variables
-else echo "   ~/.environment_variables not found"
+#else echo "   ~/.environment_variables not found"
 fi
 
 export NODE_ENV=development
