@@ -16,8 +16,9 @@
 ## wget
 ## Vagrant
 ## Docker (boot2docker)
-
 ## Total Terminal
+## Pow (http://pow.cx/)
+## Nginx
 
 # Text Editors/IDEs
 
