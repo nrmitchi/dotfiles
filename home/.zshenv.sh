@@ -10,8 +10,10 @@ fi
 
 # Editors.
 # --------
-export EDITOR='/usr/local/bin/subl'
-export VISUAL='/usr/local/bin/subl'
+# export EDITOR='/usr/local/bin/subl'
+export EDITOR='/usr/bin/vim'
+# export VISUAL='/usr/local/bin/subl'
+export VISUAL='/usr/bin/vim'
 export PAGER='less'
 
 # Language.
@@ -116,6 +118,8 @@ BROWSER=''
 unset BROWSER
 
 export NODE_PATH='/usr/local/lib/node_modules'
+
+export PATH=$PATH:/usr/local/activator
 
 if [ -f ~/.rvm/scripts/rvm ]; then
   source ~/.rvm/scripts/rvm
