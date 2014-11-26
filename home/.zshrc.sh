@@ -305,8 +305,10 @@ case $TERM in
         ;;
 esac
 
-alias fixsound='sudo kextunload /System/Library/Extensions/AppleHDA.kext && sudo kextload /System/Library/Extensions/AppleHDA.kext'
-
 export GOPATH=/workspace/env/go
 PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+if [[ -s "${ZDOTDIR:-$HOME}/.zsh_aliases" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zsh_aliases"
+fi

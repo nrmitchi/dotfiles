@@ -58,11 +58,13 @@ ch="$dev/chaplinjs"
 com="$dev/com"
 pm="$dev/nrmitchi"
 as="$HOME/Library/Application Support"
+wk="$HOME/workspace/env"
 
 export ANDROID_HOME="/usr/local/Cellar/android-sdk/22.3"
 
 # Set the the list of directories that cd searches.
 cdpath=(
+  /workspace/env
   $cdpath
 )
 
