@@ -36,6 +36,8 @@ alias -g 'C'='| wc -l'    # git log C
 
 # Some OS X-only stuff.
 if [[ "$OSTYPE" == darwin* ]]; then
+
+  plugins=(osx terminalapp)
   # Short-cuts for copy-paste.
   alias c='pbcopy'
   alias p='pbpaste'
