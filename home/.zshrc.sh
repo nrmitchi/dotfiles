@@ -296,6 +296,11 @@ function maxcpu() {
   yes > $dn & yes > $dn & yes > $dn & yes > $dn &
 }
 
+# Exact same as curl, but formats response as json as well
+function jcurl() {
+  curl "$@" | python -mjson.tool
+}
+
 # Set tab title to current directory
 # Using "\e]1;%n@%m: %~\a" will include user@host
 case $TERM in
