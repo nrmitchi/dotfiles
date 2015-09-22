@@ -319,3 +319,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 if [[ -s "${ZDOTDIR:-$HOME}/.zsh_aliases" ]]; then
   source "${ZDOTDIR:-$HOME}/.zsh_aliases"
 fi
+
+bindkey '^R' history-incremental-search-backward
