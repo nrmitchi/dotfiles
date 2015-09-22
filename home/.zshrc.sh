@@ -320,4 +320,5 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zsh_aliases" ]]; then
   source "${ZDOTDIR:-$HOME}/.zsh_aliases"
 fi
 
+bindkey -v
 bindkey '^R' history-incremental-search-backward

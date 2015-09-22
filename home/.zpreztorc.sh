@@ -3,7 +3,7 @@
 #
 
 # Set the key mapping style to 'emacs' or 'vi'.
-# zstyle ':prezto:module:editor' keymap 'emacs'
+zstyle ':prezto:module:editor' keymap 'vi'
 
 # Auto convert .... to ../..
 # zstyle ':prezto:module:editor' dot-expansion 'no'
