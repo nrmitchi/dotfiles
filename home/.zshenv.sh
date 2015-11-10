@@ -64,8 +64,8 @@ export ANDROID_HOME="/usr/local/Cellar/android-sdk/22.3"
 
 # Set the the list of directories that cd searches.
 cdpath=(
-  /workspace/env
   $cdpath
+  /workspace/env
 )
 
 # Set the list of directories that info searches for manuals.
