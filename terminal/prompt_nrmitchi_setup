@@ -10,6 +10,7 @@
 # Author: Paul Miller (nrmitchi.com)
 
 vcs_info=''
+kubectl_info=''
 
 function prompt_nrmitchi_precmd {
   setopt LOCAL_OPTIONS
@@ -37,6 +38,19 @@ function get-vcs-info {
   fi
 }
 
+function get-kubectl-info {
+  kubectl_info=''
+  kubectl config current-context &>/dev/null || return
+
+  local cluster=$(kubectl config current-context)
+
+  if [[ -z "$cluster" ]]; then
+    kubectl_info=''
+  else
+    kubectl_info=" %F{blue}%F{magenta}${cluster}%f"
+  fi
+}
+
 function prompt_nrmitchi_setup {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
@@ -44,14 +58,16 @@ function prompt_nrmitchi_setup {
 
   autoload -Uz add-zsh-hook
   add-zsh-hook precmd get-vcs-info
+  add-zsh-hook precmd get-kubectl-info
   add-zsh-hook chpwd list-files
   add-zsh-hook chpwd get-vcs-info
+  add-zsh-hook chpwd get-kubectl-info
 
   # zstyle ':omz:module:editor' completing '%B%F{red}...%f%b'
 
   PROMPT='%F{yellow}%T %F{magenta}${SSH_TTY:+%n@%m }%F{cyan}%1~%f${vcs_info}\
 %(!.%B%F{red}#%f%b.%B %(?.%F{green}.%F{red})❯%f%b) '
-  RPROMPT=''
+  RPROMPT='${kubectl_info}'
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
 
