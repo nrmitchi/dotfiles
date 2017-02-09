@@ -30,8 +30,10 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'environment' \
   'history' \
-  'node' \
   'spectrum' \
   'syntax-highlighting' \
   'terminal' \
   'utility'
+
+# completion
+# node  # This is for nodejs
