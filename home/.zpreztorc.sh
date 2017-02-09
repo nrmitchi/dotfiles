@@ -1,6 +1,6 @@
-#
+
 # Sets Prezto options.
-#
+
 
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':prezto:module:editor' keymap 'vi'

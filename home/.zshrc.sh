@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 
+# Start and load zprezto options
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
@@ -98,39 +99,8 @@ alias gcl='git clone'
 alias gch='git checkout'
 alias gl='git log --no-merges'
 
-# Dev short-cuts.
-
-# Brunch.
-# alias bb='brunch build'
-# alias bbp='brunch build --production'
-# alias dbb="DEBUG='brunch:*' brunch build"
-# alias dbw="DEBUG='brunch:*' brunch watch"
-# alias bw='brunch watch'
-# alias bws='brunch watch --server'
-
-# Package managers.
-alias bi='bower install'
-alias bis='bower install --save'
-alias ni='npm install'
-alias nis='npm install --save'
-
 alias jk='jekyll serve --watch' # lol jk
 alias serve='python -m SimpleHTTPServer'
-
-# Nginx short-cuts.
-alias ngup='sudo nginx'
-alias ngstop='sudo nginx -s stop'
-
-# Burl: better curl shortcuts (https://github.com/visionmedia/burl).
-if (( $+commands[burl] )); then
-  alias GET='burl GET'
-  alias HEAD='burl -I'
-  alias POST='burl POST'
-  alias PUT='burl PUT'
-  alias PATCH='burl PATCH'
-  alias DELETE='burl DELETE'
-  alias OPTIONS='burl OPTIONS'
-fi
 
 # Lists the ten most used commands.
 alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
@@ -289,18 +259,6 @@ function compute() {
     | hexdump -C | grep "ca fe"
 }
 
-# Load 8 cores at once.
-function maxcpu() {
-  dn=/dev/null
-  yes > $dn & yes > $dn & yes > $dn & yes > $dn &
-  yes > $dn & yes > $dn & yes > $dn & yes > $dn &
-}
-
-# Exact same as curl, but formats response as json as well
-function jcurl() {
-  curl "$@" | python -mjson.tool
-}
-
 # Set tab title to current directory
 # Using "\e]1;%n@%m: %~\a" will include user@host
 case $TERM in
@@ -315,10 +273,6 @@ esac
 export GOPATH=/workspace/env/go
 PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-if [[ -s "${ZDOTDIR:-$HOME}/.zsh_aliases" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zsh_aliases"
-fi
 
 bindkey -v
 bindkey '^R' history-incremental-search-backward
