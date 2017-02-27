@@ -279,3 +279,6 @@ bindkey '^R' history-incremental-search-backward
 
 eval "$(pyenv init -)"
 
+# Change directory display color to Green
+export LSCOLORS=cxfxcxdxbxGxDxabagacad
+
