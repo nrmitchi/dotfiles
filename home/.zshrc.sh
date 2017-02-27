@@ -282,3 +282,6 @@ eval "$(pyenv init -)"
 # Change directory display color to Green
 export LSCOLORS=cxfxcxdxbxGxDxabagacad
 
+# Kubernetes aliases
+alias k="kubectl"
+alias mk="minikube"
