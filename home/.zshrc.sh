@@ -274,6 +274,9 @@ export GOPATH=/workspace/env/go
 PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+# added by Anaconda3 4.3.1 installer
+export PATH="/Users/nrmitchi/anaconda3/bin:$PATH"
+
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
