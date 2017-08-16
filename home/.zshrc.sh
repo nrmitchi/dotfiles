@@ -275,7 +275,7 @@ PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # added by Anaconda3 4.3.1 installer
-export PATH="/Users/nrmitchi/anaconda3/bin:$PATH"
+# export PATH="/Users/nrmitchi/anaconda3/bin:$PATH"
 
 bindkey -v
 bindkey '^R' history-incremental-search-backward
@@ -288,3 +288,8 @@ export LSCOLORS=cxfxcxdxbxGxDxabagacad
 # Kubernetes aliases
 alias k="kubectl"
 alias mk="minikube"
+
+if type kubectl > /dev/null; then
+  source <(kubectl completion zsh)
+fi
+
