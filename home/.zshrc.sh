@@ -293,3 +293,5 @@ if type kubectl > /dev/null; then
   source <(kubectl completion zsh)
 fi
 
+alias d="docker"
+alias dc="docker-compose"
