@@ -87,6 +87,7 @@ install_system_tools() {
       - wget
       - nginx
       - docker
+      - virtualbox
       - minikube
   """
 
@@ -97,6 +98,7 @@ install_system_tools() {
 
   brew cask install \
     docker \
+    virtualbox \
     minikube
 }
 
