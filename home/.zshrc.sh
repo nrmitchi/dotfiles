@@ -295,3 +295,7 @@ fi
 
 alias d="docker"
 alias dc="docker-compose"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
+

@@ -59,7 +59,7 @@ done
 unset path_file
 
 # Set the list of directories that Zsh searches for programs.
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+# export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 path=(
   /usr/local/{bin,sbin}
   /usr/local/opt/ruby/bin
