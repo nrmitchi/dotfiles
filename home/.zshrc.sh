@@ -305,7 +305,15 @@ function kubectl() {
 }
 
 # RVM thing
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+function rvm() {
+    if ! type __rvm_has_opt >/dev/null 2>&1; then
+        [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+    fi
+
+    command rvm "$@"
+}
 
 # NVM thing
 # export NVM_DIR="$HOME/.nvm"
