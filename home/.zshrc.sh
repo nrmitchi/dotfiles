@@ -105,6 +105,14 @@ alias serve='python -m SimpleHTTPServer'
 # Lists the ten most used commands.
 alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
 
+# Kubernetes
+alias k="kubectl"
+alias mk="minikube"
+
+# Docker aliases
+alias d="docker"
+alias dc="docker-compose"
+
 # ==================================================================
 # = Functions =
 # ==================================================================
@@ -270,7 +278,6 @@ case $TERM in
         ;;
 esac
 
-export GOPATH=/workspace/env/go
 PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
@@ -280,18 +287,23 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
-eval "$(pyenv init -)"
-
 # Change directory display color to Green
 export LSCOLORS=cxfxcxdxbxGxDxabagacad
 
-# Kubernetes aliases
-alias k="kubectl"
-alias mk="minikube"
+# This is insanely slow currently due to: https://github.com/kubernetes/kubernetes/issues/59078
+# Replace when the issue is solved.
+# if type kubectl > /dev/null; then
+#   source <(kubectl completion zsh)
+# fi
 
-if type kubectl > /dev/null; then
-  source <(kubectl completion zsh)
-fi
+function kubectl() {
+    if ! type __start_kubectl >/dev/null 2>&1; then
+        source <(command kubectl completion zsh)
+    fi
 
-alias d="docker"
-alias dc="docker-compose"
+    command kubectl "$@"
+}
+
+# RVM thing
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
