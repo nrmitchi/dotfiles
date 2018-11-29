@@ -94,6 +94,8 @@ install_system_tools() {
   brew install \
     htop \
     wget \
+    jq \
+    python-yq \
     nginx
 
   brew cask install \

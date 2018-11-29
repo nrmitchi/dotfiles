@@ -307,3 +307,7 @@ function kubectl() {
 # RVM thing
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# NVM thing
+# export NVM_DIR="$HOME/.nvm"
+# source "/usr/local/opt/nvm/nvm.sh"
+
