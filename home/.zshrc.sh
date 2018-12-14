@@ -343,6 +343,7 @@ group_lazy_load() {
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 group_lazy_load $HOME/.rvm/scripts/rvm rvm irb rake rails
+group_lazy_load /usr/local/opt/nvm/nvm.sh nvm
 
 # NVM thing
 # export NVM_DIR="$HOME/.nvm"
