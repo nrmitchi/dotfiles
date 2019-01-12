@@ -51,6 +51,15 @@ function get-kubectl-info {
   fi
 }
 
+function set-kubeconfig {
+  # Sets the KUBECONFIG environment variable to a dynamic concatentation of everything
+  # under ~/.kube/configs/*
+  # Does NOT overwrite KUBECONFIG if the KUBECONFIG_MANUAL env var is set
+  if [[ -z "$KUBECONFIG_MANUAL" ]]; then
+    export KUBECONFIG=~/.kube/config:$(ls ~/.kube/configs/* | xargs -I % echo -n "%:")
+  fi
+}
+
 function prompt_nrmitchi_setup {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
@@ -58,7 +67,9 @@ function prompt_nrmitchi_setup {
 
   autoload -Uz add-zsh-hook
   add-zsh-hook precmd get-vcs-info
+  add-zsh-hook precmd set-kubeconfig
   add-zsh-hook precmd get-kubectl-info
+
   add-zsh-hook chpwd list-files
   add-zsh-hook chpwd get-vcs-info
   add-zsh-hook chpwd get-kubectl-info
