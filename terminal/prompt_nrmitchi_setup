@@ -55,8 +55,11 @@ function set-kubeconfig {
   # Sets the KUBECONFIG environment variable to a dynamic concatentation of everything
   # under ~/.kube/configs/*
   # Does NOT overwrite KUBECONFIG if the KUBECONFIG_MANUAL env var is set
-  if [[ -z "$KUBECONFIG_MANUAL" ]]; then
-    export KUBECONFIG=~/.kube/config:$(ls ~/.kube/configs/* | xargs -I % echo -n "%:")
+
+  if [ -d ~/.kube/configs ]; then
+    if [ -z "$KUBECONFIG_MANUAL" ]; then
+      export KUBECONFIG=~/.kube/config:$(find ~/.kube/configs -type f 2>/dev/null | xargs -I % echo -n "%:")
+    fi
   fi
 }
 
