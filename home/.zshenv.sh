@@ -68,6 +68,7 @@ path=(
   /usr/{bin,sbin}
   /{bin,sbin}
   $ANDROID_HOME/tools
+  ~/.kube/plugins
   $path
 )
 
@@ -84,8 +85,3 @@ if [[ -d "$TMPDIR" ]]; then
   fi
 fi
 
-# # This is super slow, and I don't ever use it
-# if [ -f ~/.rvm/scripts/rvm ]; then
-#   source ~/.rvm/scripts/rvm
-# #else echo "   ~/.rvm/scripts/rvm not found"
-# fi
