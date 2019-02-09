@@ -98,6 +98,11 @@ install_system_tools() {
     python-yq \
     nginx
 
+  brew install \
+    kubernetes-cli \
+    kubectx \
+    fzf
+
   brew cask install \
     docker \
     virtualbox \
