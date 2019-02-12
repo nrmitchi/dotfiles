@@ -42,7 +42,6 @@ Shell (zsh):
 * `etc` — various stuff like osx text substitutions / hosts backup
 * `git-extras` — useful git functions, defined in `home/gitconfig`
 * `home` — files that are symlinked to `$HOME` directory
-* `sublime` — sublime text 2 theme & settings
 * `terminal` — terminal theme & prompt
 
 ## Building system from scratch (reminder)

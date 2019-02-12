@@ -109,6 +109,10 @@ alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r 
 alias k="kubectl"
 alias mk="minikube"
 
+alias kns="kubens"
+alias kctx="kubectx"
+alias ktx="kubectx"
+
 # Docker aliases
 alias d="docker"
 alias dc="docker-compose"

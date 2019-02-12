@@ -26,9 +26,5 @@ done
 
 link "$dotfiles/.kube/plugins" "$HOME/.kube/plugins"
 
-if [[ `uname` == 'Darwin' ]]; then
-  link "$dotfiles/sublime/Packages/User/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-fi
-
 # Symlink dnsmasq config
 link "$dotfiles/etc/dnsmasq.conf" "/usr/local/etc/dnsmasq.conf"

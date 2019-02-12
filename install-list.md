@@ -26,7 +26,6 @@
 
 # Text Editors/IDEs
 
-## Sublime Text 2
 ## IntelliJ
 ## WebStorm
 ## Atom
@@ -42,7 +41,6 @@
 
 ## Sparrow
 ## Textual
-## Sublime Text 2
 ## Postman
 ## Rdio
 ## Wunderlist

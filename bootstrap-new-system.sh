@@ -46,20 +46,6 @@ fi
 echo 'Symlinking config files...'
   source 'bin/symlink-dotfiles.sh'
 
-echo 'Applying sublime config...'
-  st=$(pwd)/sublime/packages
-  as="$HOME/Application Support/Sublime Text 3/Packages"
-  asprefs="$as/User/Preferences.sublime-settings"
-  if [[ -d "$as" ]]; then
-    for theme in $st/Theme*; do
-      cp -r $theme $as
-    done
-    rm $asprefs
-    cp -r $st/pm-themes $as
-  else
-    echo "Install Sublime Text http://www.sublimetext.com"
-  fi
-
 install_tools() {
   echo "Installing:"
   install_languages
