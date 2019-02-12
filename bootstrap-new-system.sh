@@ -49,7 +49,7 @@ echo 'Symlinking config files...'
 install_tools() {
   echo "Installing:"
   install_languages
-  install_tools
+  install_system_tools
   install_applications
 }
 
@@ -93,6 +93,9 @@ install_system_tools() {
     docker \
     virtualbox \
     minikube
+
+  brew cask install \
+    iterm2
 }
 
 install_applications() {
@@ -118,7 +121,8 @@ install_applications() {
     google-chrome \
     skitch \
     slack \
-    sublime-text
+    sublime-text \
+    visual-studio-code
 }
 
 echo 'Would you like to install all your basic applications and tools?'
