@@ -82,6 +82,7 @@ install_system_tools() {
 
   brew install \
     htop \
+    trash \
     wget \
     jq \
     python-yq \
