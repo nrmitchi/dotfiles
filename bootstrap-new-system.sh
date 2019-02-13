@@ -77,6 +77,9 @@ install_system_tools() {
       - minikube
   """
 
+  # Install Homebrew
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
   brew install \
     htop \
     wget \
@@ -86,8 +89,11 @@ install_system_tools() {
 
   brew install \
     kubernetes-cli \
+    kops \
     kubectx \
     fzf
+
+  brew install awscli
 
   brew cask install \
     docker \
@@ -95,7 +101,8 @@ install_system_tools() {
     minikube
 
   brew cask install \
-    iterm2
+    iterm2 \
+    hub
 }
 
 install_applications() {
