@@ -35,7 +35,7 @@ set hlsearch            " highlight all matches
 set foldmethod=indent   " fold based on indent level
 set foldnestmax=10      " max 10 depth
 set foldenable          " don't fold files by default on open
-nnoremap <space> za
+" nnoremap <space> za
 set foldlevelstart=10    " start with fold level of 1
 " }}}
 " Line Shortcuts {{{
@@ -57,7 +57,7 @@ onoremap il :<c-u>call <SID>NextTextObject('i', 'F')<cr>
 xnoremap il :<c-u>call <SID>NextTextObject('i', 'F')<cr>
 " }}}
 " Leader Shortcuts {{{
-let mapleader=","
+let mapleader="\<Space>"
 nnoremap <leader>m :silent make\|redraw!\|cw<CR>
 nnoremap <leader>w :NERDTree<CR>
 nnoremap <leader>u :GundoToggle<CR>
