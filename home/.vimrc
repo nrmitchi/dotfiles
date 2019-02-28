@@ -57,7 +57,8 @@ onoremap il :<c-u>call <SID>NextTextObject('i', 'F')<cr>
 xnoremap il :<c-u>call <SID>NextTextObject('i', 'F')<cr>
 " }}}
 " Leader Shortcuts {{{
-let mapleader="\<Space>"
+"let mapleader="\<Space>"
+let mapleader=","
 nnoremap <leader>m :silent make\|redraw!\|cw<CR>
 nnoremap <leader>w :NERDTree<CR>
 nnoremap <leader>u :GundoToggle<CR>
