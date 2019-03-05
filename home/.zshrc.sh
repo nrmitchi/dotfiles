@@ -69,6 +69,7 @@ fi
 # Git short-cuts.
 alias g='git'
 alias ga='git add'
+alias gb='git branch'
 alias gr='git rm'
 
 alias gf='git fetch'
