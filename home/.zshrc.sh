@@ -98,7 +98,7 @@ function gcp() {
 }
 alias gcl='git clone'
 alias gch='git checkout'
-alias gl='git log'
+alias gl='git log --graph'
 
 alias jk='jekyll serve --watch' # lol jk
 alias serve='python -m SimpleHTTPServer'
