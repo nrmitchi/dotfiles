@@ -354,3 +354,12 @@ group_lazy_load /usr/local/opt/nvm/nvm.sh nvm
 # export NVM_DIR="$HOME/.nvm"
 # source "/usr/local/opt/nvm/nvm.sh"
 
+## Begin Fullstory setup.
+# Todo: Limit this to only FS machine.
+export SKIP_FS_PS1=true
+export FS_SKIP_CD=true
+source /Users/nicholas/.fsprofile
+eval "$(direnv hook zsh)"
+PATH=$PATH:/Users/nicholas/src/fsdev/tools/go/bin # Add FS go bin dir to path
+## End Fullstory setup.
+
