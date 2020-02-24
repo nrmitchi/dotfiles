@@ -111,7 +111,7 @@ install_applications() {
     Installing applications from Homebrew:
       - alfred
       - amethyst
-      - dashlane
+      - 1password
       - dropbox
       - firefox
       - google-chrome
@@ -123,7 +123,7 @@ install_applications() {
   brew cask install \
     alfred \
     amethyst \
-    dashlane \
+    1password \
     dropbox \
     firefox \
     google-chrome \
