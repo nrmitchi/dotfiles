@@ -42,7 +42,7 @@ function get-kubectl-info {
   kubectl_info=''
   kubectl config current-context &>/dev/null || return
 
-  local cluster=$(kubectl config current-context)
+  local cluster=$(kubectl config current-context 2> /dev/null)
 
   if [[ -z "$cluster" ]]; then
     kubectl_info=''
