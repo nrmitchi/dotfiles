@@ -100,6 +100,11 @@ alias gcl='git clone'
 alias gch='git checkout'
 alias gl='git log --graph'
 
+# Terraform short-cuts
+alias tf='terraform'
+alias tfp='terraform plan'
+alias tfa='terraform apply'
+
 alias jk='jekyll serve --watch' # lol jk
 alias serve='python -m SimpleHTTPServer'
 
@@ -283,6 +288,7 @@ case $TERM in
         ;;
 esac
 
+GOPATH=~/go
 PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
@@ -354,12 +360,23 @@ group_lazy_load /usr/local/opt/nvm/nvm.sh nvm
 # export NVM_DIR="$HOME/.nvm"
 # source "/usr/local/opt/nvm/nvm.sh"
 
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 ## Begin Fullstory setup.
 # Todo: Limit this to only FS machine.
-export SKIP_FS_PS1=true
-export FS_SKIP_CD=true
-source /Users/nicholas/.fsprofile
-eval "$(direnv hook zsh)"
-PATH=$PATH:/Users/nicholas/src/fsdev/tools/go/bin # Add FS go bin dir to path
+if [ $(hostname) = "nicholas" ]; then
+
+    # The next line updates PATH for the Google Cloud SDK.
+    if [ -f '/Users/nick/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nick/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+    # The next line enables shell command completion for gcloud.
+    if [ -f '/Users/nick/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nick/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+    export SKIP_FS_PS1=true
+    export FS_SKIP_CD=true
+    source /Users/nicholas/.fsprofile 2> /dev/null
+    eval "$(direnv hook zsh)"
+    PATH=$PATH:/Users/nicholas/src/fsdev/tools/go/bin # Add FS go bin dir to path
+fi
 ## End Fullstory setup.
 
