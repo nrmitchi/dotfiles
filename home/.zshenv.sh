@@ -31,7 +31,7 @@ typeset -gUT INFOPATH infopath
 # # Commonly used directories.
 dev="$HOME/Developer"
 pm="$dev/nrmitchi"
-wk="$HOME/workspace/env"
+wk="$HOME/src/"
 
 # Set the the list of directories that cd searches.
 cdpath=(

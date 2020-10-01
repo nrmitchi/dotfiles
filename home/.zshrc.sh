@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+# zmodload zsh/zprof
+
 # Start and load zprezto options
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -363,7 +365,6 @@ group_lazy_load /usr/local/opt/nvm/nvm.sh nvm
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 ## Begin Fullstory setup.
-# Todo: Limit this to only FS machine.
 if [ $(hostname) = "nicholas" ]; then
 
     # The next line updates PATH for the Google Cloud SDK.
@@ -374,9 +375,12 @@ if [ $(hostname) = "nicholas" ]; then
 
     export SKIP_FS_PS1=true
     export FS_SKIP_CD=true
+    # Telemetry is causing my entire shell start up to hang indefinitely
+    export FS_TELEMETRY_SKIP=true
     source /Users/nicholas/.fsprofile 2> /dev/null
     eval "$(direnv hook zsh)"
     PATH=$PATH:/Users/nicholas/src/fsdev/tools/go/bin # Add FS go bin dir to path
 fi
 ## End Fullstory setup.
 
+# zprof
