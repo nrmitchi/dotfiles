@@ -33,12 +33,6 @@ dev="$HOME/Developer"
 pm="$dev/nrmitchi"
 wk="$HOME/src/"
 
-# Set the the list of directories that cd searches.
-cdpath=(
-  $cdpath
-  /workspace/env
-)
-
 # Set the list of directories that info searches for manuals.
 infopath=(
   /usr/local/share/info

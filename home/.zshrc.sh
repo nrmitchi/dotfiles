@@ -375,6 +375,8 @@ if [ $(hostname) = "nicholas" ]; then
 
     export SKIP_FS_PS1=true
     export FS_SKIP_CD=true
+    # Completion is giving me a 2-3s shell prompt time
+    export FS_SKIP_COMP=true
     # Telemetry is causing my entire shell start up to hang indefinitely
     export FS_TELEMETRY_SKIP=true
     source /Users/nicholas/.fsprofile 2> /dev/null
